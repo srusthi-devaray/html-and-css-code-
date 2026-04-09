@@ -1,0 +1,145 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    background-color:rgb(212, 224, 224);
+}
+.nav-bar{
+    background-color:darksalmon;
+    height:70px;
+    display: flex;
+    justify-content:space-between;
+}
+.logo{
+    font-size:30px;
+    font-family: sans-serif;
+    color: aliceblue;
+    font-weight:bolder;
+    padding: 20px;
+
+} 
+.link{
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-right: 20px;
+
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left:30px;
+    font-weight: 500px
+}
+/*hero section*/
+.hero{
+    width:100%;
+    background-image: url("https://t3.ftcdn.net/jpg/09/15/15/78/360_F_915157850_3ElhFtbcGIvVQ8ABNFSR7jUqkXdIIJpW.jpg");
+    height:400px;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    color:black;
+    padding:140px 0;
+    text-align: center;
+}
+.hero-section h2{
+    font-size: 40px;
+    font-weight:bolder;
+
+
+}
+.hero-section p{
+    font-size: 20px;
+    font-weight:500;
+
+
+}
+.search-box input{
+    width:70%;
+    background-color:aliceblue;
+    padding:10px;
+    outline:none;
+    border:0px;
+    border-radius:5px 0 0 5px;
+    font-size:1rem;
+    color: black;
+    text-align: center;
+
+}
+
+button{
+    width:6%;
+    padding:10px;
+    outline:none;
+    border:none;
+    border-radius:5px 0 0 5px;
+    font-size:1rem;
+    cursor:pointer;
+    background-color: red;
+    color: aliceblue;
+}
+/*recipe section*/
+.recipe{
+    padding:60px;
+}
+.recipe h1{
+    text-align: center;
+    font-size:35px;
+    font-weight:bolder;
+    color:black
+}
+.recipe-section{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap:10px;
+     width:90%;
+}
+.recipe-card{
+    background-color: aliceblue;
+    margin:30px 15px;
+    border-radius:5px;
+    border:1px solid #ccc;
+
+    
+
+}
+/*.recipe-card img {
+         width:100%;
+        height:200px;
+        object-fit: cover;
+
+}*/
+.recipe-card h2{
+    font-size: 22px;
+    padding:20px;
+    text-align: center;
+
+
+}
+.recipe-card p{
+    font-size: 22px;
+    padding:20px;
+}
+.recipe-card a{
+    background-color: rgb(90, 81, 81);
+    text-align: center;
+    height:30px;
+    color:white;
+    display: block;
+    width:80%;
+    margin:15px;
+}
+footer{
+    background-color:rgb(90, 81, 81) ;
+    padding:20px;
+    font-size: larger;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+}
