@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalexpencetracker</title>
+</head>
+<body>
+    <script>
+        
+        let data=JSON.parse(localStorage.getItem('data'))||{
+            name:'',
+            balance:0,
+            expenses:[]
+        }
+        localStorage.removeItem(data)
+
+        function createuser(name,balance){
+            data.name=name;
+            data.balance=balance;
+            localStorage.setItem('data',JSON.stringify(data))
+            console.log('user created'+' ' +  data.name);
+            console.log('balances'+ ' ' + data.balance);
+
+        }
+
+        function addexpences(amount,category){
+            if (amount>data.balance){
+                console.log('Not enough balance')
+                return 
+            }
+            data.balance-=amount;
+            let expense={
+                amount:amount,
+                category:category
+            };
+            data.expenses.push(expense);
+            localStorage.setItem('data',JSON.stringify(data))
+            console.log('expense added', ' '  ,expense)
+            console.log('remaining added'+ ' ' +data.balance)
+
+        }
+
+        function addmoney(amount){
+            data.balance+=amount
+            localStorage.setItem('data',JSON.stringify(data))
+
+            console.log('Money added', ' ' + amount)
+            console.log('Newbalance',' ' + data.balance)
+
+
+        }
+
+        function showexpense(){
+            console.log('All expense')
+
+            for (let i=0;i<data.expenses.length;i++){
+                console.log(data.expenses[i])
+            }
+        }
+
+        function showbalance(){
+            console.log('current balances',' '+ data.balance);
+        }
+
+        function resetdata(){
+            data.name='',
+            data.balance=0,
+            data.expenses=[]
+
+            localStorage.setItem('data',JSON.stringify(data));
+            console.log('All data has been reset')
+        }
+
+        createuser('srusthi',10000)
+
+
+        addexpences(1000,'food')
+        addexpences(5000,'snacks')
+        addexpences(4000,'travel')
+
+        addmoney(20000)
+
+        showexpense();
+
+        showbalance();
+    </script>
+</body>
+</html>
